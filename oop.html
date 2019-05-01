@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+  <title>Michael Zhou's Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="basicFormat.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+     
+
+    /* Style the header */
+    header {
+      background-color: 83BEDE;
+      padding: 20px;
+      text-align: center;
+      font-size: 55px;
+      color: 83BEDE;
+      background-image: url("");
+    }
+
+ 
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>OOP - Object Oriented Programing</h2>
+
+  </header>
+
+  <section>
+    <nav>
+      <ul>
+       <p> Navagation </p>
+       <button onclick="window.location.href = 'homepage.html';">Homepage</button>
+       <button onclick="window.location.href = 'about.html';">About Me</button>
+       <button onclick="window.location.href = 'oop.html';">OOP</button>
+       <button onclick="window.location.href = 'Array.html';">Arrays and ArrayLists</button>
+       <button onclick="window.location.href = 'sort.html';">Sorts And Searches</button>
+       <button onclick="window.location.href = 'recursion.html';">Recursion</button>
+       <button onclick="window.location.href = 'oop2.html';">OOP2</button>
+       <button onclick="window.location.href = 'past.html';">Past Projects</button>
+       <button onclick="window.location.href = 'final.html';">Final Project</button>
+       <button onclick="window.location.href = 'bibliography.html';">Bibliography</button>
+     </ul>
+   </nav>
+
+   <article>
+    <h2>OOP - Object Oriented Programing</h2>
+    <img src="Images/ooptop.png">
+    <p> Java is an object-oriented programing language. Problems are solved by making objects interact with each other.
+    Objects are created using a class. </p>
+
+    <h1> Objects </h1>
+    <p> Objects are the instances of your class. Just like in real life, every object has an name, attributes that define its states and behaviors. </p>
+
+    <h1> Classes </h1>
+    <p> Classes act as templates (or blueprints for making objects) Every class has an identifier (the name), variables which define the attributes, methods which defines the behaviors, and a constructor. The animal class shown below, has four instance variables name, tired, hungry, and weight. It has methods feed(String v) and sleep () as well as a constructor that takes two parameters.</p>
+
+        <pre> public class Animal {
+     //instance variables
+     private String name;
+     private boolean tired;
+     private boolean hungry;
+     private double weight;
+     
+     //The constructor
+     public Animal (String n, double w) {
+      name = n;
+      tired = true;
+      hungry = true;
+      weight = w;
+     }
+     
+     //first method
+     public void feed (String v) {
+     hungry = false;
+     if (v.equals("vegetables"))
+      weight +=2;
+     else if (v.equals("meat"))
+      weight += 4;
+     else
+      weight += 1;
+     
+     }
+     
+     //second method
+     public void sleep () {
+      tired = false;
+      weight -=3;
+     }
+     
+    }
+    </pre>
+
+    <h1> Constructor </h1>
+    <p> Every class has a constructor. This is a method that is called when its object is created. It helps construct the object and gives initial values for its instance variables. In the example below, the constructor for the animal (class shown above) is shown. It takes two parameters of type String and double for. The first parameter
+      String n is used to initialize the name of the animal, the second, double w, is used to initialize the weight of the animal. defualt values are given to the remaing variables (boolean tired, boolean hungry). </p>
+
+    <pre> 
+      //The constructor
+     public Animal (String n, double w) {
+      name = n;
+      tired = true;
+      hungry = true;
+      weight = w;
+     }
+     </pre>  
+
+    <h1> Access Modifiers and Encapsulation </h1>
+    <p>For now we can say there are two types of access modifiers for variables or methods, public and private. Public means the variable or method can be accessed anywhere (inside the class and anywhere else). Private means the variable or method can can only be accessed in the class it is in. In object oriented programing, private access modifiers are used with variables to make the program more secure. In order to access and modifiy these variables, we can use get methods and set methods. Below is an example of a set method and a get method for the name variable inside of the animal class. </p>
+
+    <pre>
+    //set method to set the name of the animal
+      public void setName (String theName) {
+        name = theName;
+    }
+
+    //get method to get the name of the animal
+      public String getName () {
+        return name;
+    }
+  </pre>
+
+    <h1> Static vs Instance </h1>
+    <p> 
+    <h1> Overloading </h1>
+    <p> Overloading occurs when you have more than a single method or constructor with the same name, but different parameters. </p> 
+
+    <h1> toString() </h1>
+    <p>This is a defualt method that will subtlely exist in every class that you created (it is inheirited from the Object superclass). It will ensure that whenever the object is passed directly into a System.out.println () method, a String will be outputed that will describe the object.</p>
+
+    <h1> UML </h1>
+    <p> This stands for Unified Modeling Language which is a way of representing a class structure on paper. Each class is represented as a box with 3 sections. The first section will contain the name of the class, the second will contain the class's instance variables and the third will contain the methods. Access modifiers are shown using a + (for public) or - (for private) sign in front of the variable or method. The identifier comes after the access modfier (with a set of brackets at the end if it is a method). If there are parameters, they are listed in the set of brackets. Data types or return types are shown after with a semi-colon in between the identifier and the data type/return type. An example of a simple UML is shown below. </p>
+
+    <h2>Applications of Object Oriented Programing</h2>
+    <p>Don't Fear The OOP Project created by Me, Arash, and Alexander </p>
+    <a href="Application/DontFearOOP.html">Don't Fear The OOP</a>
+    <p></p>
+    <p></p>
+  </article>
+</section>
+
+<footer>
+  <p>Michael Zhou's Portfolio - March 24, 2019</p>
+</footer>
+
+</body>
+</html>

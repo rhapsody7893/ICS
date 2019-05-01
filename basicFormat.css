@@ -1,0 +1,71 @@
+	body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      min-height: 100%;
+    }
+
+    button {
+      background-color: #89b6ff;
+      border: none;
+      color: white;
+      
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+      width: 115px;
+      height: 40px;
+    }
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+      float: left;
+      width: 15%;
+      height: 100%;
+      background-color: #CFEBEB ;
+   
+    }
+
+    /* Style the list inside the menu */
+    nav ul {
+      list-style-type: none;
+      font-size: 20px;
+      text-align: center;
+      padding: 0;
+      height: 100%;
+    }
+
+    article {
+      float: left;
+      padding: 20px;
+      width: 85%;
+      background-color: #f1f1f1;
+    }
+
+    /* Clear floats after the columns */
+    section:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Style the footer */
+    footer {
+      background-color: 83BEDE;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      
+    }
+
+    pre {
+      background-color: white;
+      color : black;
+    }
+    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+
